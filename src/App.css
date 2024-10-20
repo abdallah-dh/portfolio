@@ -1,0 +1,41 @@
+body {
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0px;
+    font-family: "Varela Round", sans-serif;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  .app-container {
+    display: flex;
+    width: 100vw;
+    min-height: 100vh; /* Make sure it covers the full viewport height */
+    height: auto; 
+    padding-bottom: 20px;/* Allow it to expand with content */
+}
+.main-app-container { /* This will take up the remaining space */
+  width: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Optional padding */
+}
+
+@media (max-width: 768px) {
+
+  .main-app-container { /* This will take up the remaining space */
+    width: calc(100% - 60px); /* Optional padding */
+  }
+
+
+}
+
+@media (max-width: 480px) {
+
+  .main-app-container { /* This will take up the remaining space */
+    width: calc(100% - 50px); /* Optional padding */
+  }
+
+}

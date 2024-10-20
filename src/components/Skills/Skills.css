@@ -1,0 +1,132 @@
+:root {
+    --yellow: #f8b017;
+    --background-dark: #121212;
+    --circle-size: 150px;
+  }
+  
+  .skills-container {
+    text-align: center;
+    color: white;
+    width: 90vw;
+  }
+  
+  
+  .skills-container h1 {
+    font-size: 45px;
+    margin-bottom: 80px;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+    gap: 100px;
+    justify-content: space-evenly;
+    padding: 0 10vw;
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+  }
+  
+  .outer-circle {
+    width: var(--circle-size);
+    height: var(--circle-size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  
+  .inner-circle {
+    width: calc(var(--circle-size) - 20px);
+    height: calc(var(--circle-size) - 20px);
+    border-radius: 50%;
+    background-color: var(--background-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .percentage {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .skill p {
+    margin-top: 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 1024px) {
+    .skills-container h1 {
+      font-size: 35px;
+    }
+  
+    .skills-grid {
+      gap: 50px;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skills-container h1 {
+      font-size: 28px;
+    }
+  
+    .skills-grid {
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for phone screens */
+    }
+  
+    .outer-circle {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .inner-circle {
+      width: calc(90px - 10px);
+      height: calc(90px - 10px);
+    }
+  
+    .percentage {
+      font-size: 18px;
+    }
+  
+    .skill p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on very small screens */
+      gap: 15px;
+    }
+  
+    .outer-circle {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .inner-circle {
+      width: calc(70px - 10px);
+      height: calc(70px - 10px);
+    }
+  
+    .percentage {
+      font-size: 14px;
+    }
+  
+    .skill p {
+      font-size: 12px;
+    }
+  }
+  

@@ -1,0 +1,164 @@
+:root {
+    --yellow: #f8b017;
+    --background-dark: #121212;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* Base styles for navbar */
+.navbar {
+    position: fixed; /* Fixed position to keep it on the right */
+    top: 0;
+    right: 0;
+    width: 80px; /* Fixed width to match the logo size */
+    height: 100vh; /* Full height of the viewport */
+    background-color: var(--background-dark); /* Use background color for better visibility */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Adjust gap to fit the screen */ /* Reduce padding for better fit on smaller screens */
+    z-index: 1000;
+}
+
+/* Ensure the navbar is visible and styled */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+    width: 100%;
+}
+
+/* Style for each link item */
+.nav-links li {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 10px 0;
+    cursor: pointer;
+    /*Addsapointercursoronhover*/transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+}
+.nav-links li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+
+/* Background color on hover */
+
+/* Style for active link */
+.nav-links li.active {
+    background-color: var(--yellow);
+    transition: background-color 0.3s ease;
+  }
+  
+
+/* Image inside each link item */
+.nav-links li img {
+    width: 20px; /* Increased size for better visibility on mobile */
+    height: 20px; /* Increased size for better visibility on mobile */
+    transition: filter 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        width: 60px; /* Adjust width for smaller screens */
+        gap: 10px; /* Reduce gap for better fit */
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+
+    .nav-links li {
+        width: 40px; /* Adjust size for smaller screens */
+        height: 40px; /* Adjust size for smaller screens */
+    }
+
+    .nav-links li img {
+        width: 18px; /* Adjust image size for smaller screens */
+        height: 18px; /* Adjust image size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        width: 50px; /* Further adjust width for very small screens */
+        gap: 5px; /* Further reduce gap for very small screens */
+        padding: 5px 0; /* Further adjust padding for very small screens */
+    }
+
+    .nav-links li {
+        width: 35px; /* Further adjust size for very small screens */
+        height: 35px; /* Further adjust size for very small screens */
+    }
+
+    .nav-links li img {
+        width: 16px; /* Further adjust image size for very small screens */
+        height: 16px; /* Further adjust image size for very small screens */
+    }
+}
+
+/* Add animation for list items */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(20px);
+      -webkit-transform: translateX(20px);
+      -moz-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      -o-transform: translateX(20px);
+}
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      -webkit-transform: translateX(0);
+      -moz-transform: translateX(0);
+      -ms-transform: translateX(0);
+      -o-transform: translateX(0);
+}
+  }
+  
+  .nav-links li {
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly moved down */
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  /* Delay each li animation */
+  .nav-links li:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  
+  .nav-links li:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  
+  .nav-links li:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  .nav-links li:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+  .nav-links li:nth-child(5) {
+    animation-delay: 1s;
+  }
+  
